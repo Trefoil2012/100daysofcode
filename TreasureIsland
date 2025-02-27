@@ -1,0 +1,35 @@
+# https://www.asciiart.eu/animals/beavers
+# the r tells python that the backslashes are to be interpreted as literal characters and not escape sequences
+
+print(r'''
+             ___
+          .="   "=._.---.
+        ."         c ' Y'`p
+       /   ,       `.  w_/
+   jgs |   '-.   /     / 
+ _,..._|      )_-\ \_=.\
+`-....-'`------)))`=-'"`'"
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+fork = input("You are at a fork in the forest. Do you go left of right?\n").lower()
+
+if fork == "left" or fork == "l":
+    lake = input("You come to a lake with an island in the middle.\n"
+                 "Type \"wait\" to wait for a boat, or \"swim\" to swim across.\n").lower()
+    if lake == "wait" or lake == "w":
+        door = input("You arrived at the island unharmed.\n"
+                     "There is a house with 3 doors- one red, one yellow, and one blue. "
+                     "\nWhich color do you choose?\n").lower()
+        if door == "yellow" or door == "y":
+            print("You win!")
+        elif door == "red" or door == "r":
+            print("You entered a fireball and were toasted like a marshmellow. GAME OVER.")
+        elif door == "blue" or door == "b":
+            print("You entered a trolls dungeon and were eaten for dessert. GAME OVER.")
+        else:
+            print("You did not follow instructions. GAME OVER.")
+    else:
+        print("You were attached by an octopus. GAME OVER.")
+else:
+    print("You fell into a hole. GAME OVER.")
