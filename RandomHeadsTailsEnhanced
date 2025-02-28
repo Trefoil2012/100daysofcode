@@ -1,0 +1,29 @@
+#variables
+count_total = 0
+count_heads = 0
+count_tails = 0
+
+#while loop
+while (True):
+    run = input("Enter 'r' to run. Press 'q' to quit.")
+    random_number = random.randint(0, 1)
+    print(random_number)
+    if run == "q":
+        break
+    if random_number == 0:
+        count_total += 1
+        count_heads += 1
+        print("Heads")
+    if random_number == 1:
+        count_total += 1
+        count_tails += 1
+        print("Tails")
+    else:
+        continue
+
+percentage_heads = int((count_heads / count_total) * 100)
+percentage_tails = int((count_tails / count_total) * 100)
+#print totals
+print(f"\nTotal flips: {count_total}")
+print(f"Total heads: {count_heads}  {percentage_heads}%")
+print(f"Total tails: {count_tails}  {percentage_tails}%")
