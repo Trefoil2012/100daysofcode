@@ -1,0 +1,59 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+#list for images
+choice_image = [rock, paper, scissors]
+user_choice = int(input("What do you choose? "
+                    "Type 0 or Rock, 1 for Paper, or 2 for Scissors.\n"))
+#error checking in case user enters something other than 0,1,2
+if user_choice >= 3 or user_choice < 0:
+    print("You typed an invalid number. You lose.")
+else:
+    print(choice_image[user_choice])
+#generate random number for computer and print
+computer_choice = random.randint(0,2)
+print("Computer chose:")
+print(choice_image[computer_choice])
+#determine and print game outcome
+if user_choice == 0 and computer_choice == 2:
+    print("Your Rock beats Scissors. You win!")
+elif user_choice == 0 and computer_choice == 1:
+    print("Paper beats your Rock. You lose.")
+elif user_choice == 0 and computer_choice == 0:
+    print("Rock on Rock. Try again.")
+elif user_choice == 1 and computer_choice == 0:
+    print("Your Paper beats Rock. You win!")
+elif user_choice == 1 and computer_choice == 2:
+    print("Scissors beats your Paper. You lose.")
+elif user_choice == 1 and computer_choice == 1:
+    print("Paper on Paper. Try again.")
+elif user_choice == 2 and computer_choice == 1:
+    print("Your Scissors beats Paper. You win!")
+elif user_choice == 2 and computer_choice == 0:
+    print("Rock beats your Scissors. You lose.")
+elif user_choice == 2 and computer_choice == 2:
+    print("Scissors on Scissors. Try again.")
