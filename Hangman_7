@@ -1,3 +1,9 @@
+#allows for an incorrect letter to be guessed more than once... 
+#    should update code similar to when a correct letter is guessed
+#    create a list to store incorrect letters in?
+
+#remove printing word if actually playing
+
 import random
 logo = r''' 
  _                                             
