@@ -1,0 +1,18 @@
+def calculate_love_score(name1, name2):
+
+    combined_names = (name1 + name2).lower()
+    true = 0
+    love = 0
+
+    for letter in combined_names:
+        for ch in "true":
+            if letter == ch:
+                true += 1
+        for let in "love":
+            if let == letter:
+                love += 1
+
+    score = int(str(true) + str(love))
+    print(score)
+
+calculate_love_score(name1="xxx", name2="xxx")
